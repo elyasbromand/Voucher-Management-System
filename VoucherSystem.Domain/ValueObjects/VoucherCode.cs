@@ -1,0 +1,1 @@
+namespace VoucherSystem.Domain.ValueObjects { }
