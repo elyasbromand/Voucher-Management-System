@@ -6,8 +6,16 @@ namespace VoucherSystem.Domain.Entities;
 public class Voucher
 {
     public Guid Id { get; private set; }
-    public string Name { get; private set; }
-    public VoucherCode Code { get; private set; }
+    public string? Name
+    {
+        get;
+        private set
+        {
+            if (string.IsNullOrWhiteSpace(field))
+                throw new ArgumentException("Voucher name is required.");
+        }
+    }
+    public VoucherCode? Code { get; private set; }
     public DiscountType DiscountType { get; private set; }
     public decimal DiscountValue { get; private set; }
     public int MaxUses { get; private set; }
@@ -64,6 +72,7 @@ public class Voucher
             && CurrentUses < MaxUses;
     }
 
+    // send to db - Logic related method :: application layer
     public void RecordUse()
     {
         if (!IsValid())
@@ -75,6 +84,7 @@ public class Voucher
             Status = VoucherStatus.Exhausted;
     }
 
+    // send to db - Logic related method :: application layer
     public void Cancel()
     {
         if (Status != VoucherStatus.Active)
@@ -83,3 +93,6 @@ public class Voucher
         Status = VoucherStatus.Cancelled;
     }
 }
+
+
+// Create an exception class for domain specific errors - in Exceptions folder in Entity layer.

@@ -24,6 +24,7 @@ public sealed class VoucherCode
 
     public static VoucherCode Generate()
     {
+        // Use today's date + 5 chars of Guid for better readability and uniqueness
         var code = Guid.NewGuid().ToString("N")[..12].ToUpperInvariant();
         return new VoucherCode(code);
     }
