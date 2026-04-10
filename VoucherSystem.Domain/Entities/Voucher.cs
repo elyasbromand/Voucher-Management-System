@@ -6,15 +6,7 @@ namespace VoucherSystem.Domain.Entities;
 public class Voucher
 {
     public Guid Id { get; private set; }
-    public string? Name
-    {
-        get;
-        private set
-        {
-            if (string.IsNullOrWhiteSpace(field))
-                throw new ArgumentException("Voucher name is required.");
-        }
-    }
+    public string? Name { get; private set; }
     public VoucherCode? Code { get; private set; }
     public DiscountType DiscountType { get; private set; }
     public decimal DiscountValue { get; private set; }
@@ -24,8 +16,8 @@ public class Voucher
     public VoucherStatus Status { get; private set; }
     public DateTime CreatedAt { get; private set; }
 
-    // Private constructor
-    // private Voucher() { }
+    // Private constructor: to make sure that every voucher is securely created through Create method.
+    private Voucher() { }
 
     public static Voucher Create(
         string name,
@@ -93,6 +85,3 @@ public class Voucher
         Status = VoucherStatus.Cancelled;
     }
 }
-
-
-// Create an exception class for domain specific errors - in Exceptions folder in Entity layer.

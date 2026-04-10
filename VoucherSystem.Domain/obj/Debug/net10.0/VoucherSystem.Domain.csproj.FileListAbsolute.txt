@@ -9,3 +9,4 @@ C:\Users\DELL G3\Desktop\Voucher Management System\VoucherSystem.Domain\obj\Debu
 C:\Users\DELL G3\Desktop\Voucher Management System\VoucherSystem.Domain\obj\Debug\net10.0\refint\VoucherSystem.Domain.dll
 C:\Users\DELL G3\Desktop\Voucher Management System\VoucherSystem.Domain\obj\Debug\net10.0\VoucherSystem.Domain.pdb
 C:\Users\DELL G3\Desktop\Voucher Management System\VoucherSystem.Domain\obj\Debug\net10.0\ref\VoucherSystem.Domain.dll
+C:\Users\DELL G3\Desktop\Voucher Management System\VoucherSystem.Domain\obj\Debug\net10.0\VoucherSystem.Domain.sourcelink.json
