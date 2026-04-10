@@ -23,12 +23,12 @@ public class VoucherConfiguration : IEntityTypeConfiguration<Voucher>
 
         builder.HasIndex(v => v.Code).IsUnique();
 
-        builder.Property(v => v.DiscountType).IsRequired();
+        builder.Property(v => v.DiscountType).IsRequired().HasConversion<string>().HasMaxLength(50);
         builder.Property(v => v.DiscountValue).HasColumnType("decimal(18,2)");
         builder.Property(v => v.MaxUses).IsRequired();
         builder.Property(v => v.CurrentUses).IsRequired();
         builder.Property(v => v.ExpiresAt).IsRequired();
-        builder.Property(v => v.Status).IsRequired();
+        builder.Property(v => v.Status).IsRequired().HasConversion<string>().HasMaxLength(50);
         builder.Property(v => v.CreatedAt).IsRequired();
     }
 }

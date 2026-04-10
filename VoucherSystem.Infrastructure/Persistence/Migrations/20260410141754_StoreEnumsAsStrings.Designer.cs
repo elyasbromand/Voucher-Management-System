@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VoucherSystem.Infrastructure.Persistence;
 
@@ -11,9 +12,11 @@ using VoucherSystem.Infrastructure.Persistence;
 namespace VoucherSystem.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(VoucherDbContext))]
-    partial class VoucherDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260410141754_StoreEnumsAsStrings")]
+    partial class StoreEnumsAsStrings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
