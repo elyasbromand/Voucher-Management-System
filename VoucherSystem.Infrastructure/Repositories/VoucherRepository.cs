@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using VoucherSystem.Application.Interfaces;
 using VoucherSystem.Domain.Entities;
+using VoucherSystem.Domain.ValueObjects;
 using VoucherSystem.Infrastructure.Persistence;
 
 namespace VoucherSystem.Infrastructure.Repositories;
@@ -23,9 +24,10 @@ public class VoucherRepository : IVoucherRepository
     public async Task<Voucher?> GetByCodeAsync(string code, CancellationToken cancellationToken = default)
     {
         var normalizedCode = code.Trim().ToUpperInvariant();
+        var voucherCode = VoucherCode.Create(normalizedCode);
 
         return await _dbContext.Vouchers.FirstOrDefaultAsync(
-            voucher => voucher.Code!.Value == normalizedCode,
+            voucher => voucher.Code == voucherCode,
             cancellationToken
         );
     }
