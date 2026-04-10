@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VoucherSystem.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33b7f34db6a78b9f66d8ed5d4bc5cac03ec04837")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5c5620f650488a24ca0025734e56d483273fa91")]
 [assembly: System.Reflection.AssemblyProductAttribute("VoucherSystem.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VoucherSystem.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
