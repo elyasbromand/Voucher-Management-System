@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VoucherSystem.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28f321e7cbe6e785ba25fa4c15fbaa9c2da47cf5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4331907cbce4f95c3f2da263395a7aba9a246be")]
 [assembly: System.Reflection.AssemblyProductAttribute("VoucherSystem.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VoucherSystem.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
