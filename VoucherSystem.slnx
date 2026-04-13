@@ -1,6 +1,2 @@
 <Solution>
-  <Project Path="VoucherSystem.API/VoucherSystem.API.csproj" />
-  <Project Path="VoucherSystem.Application/VoucherSystem.Application.csproj" />
-  <Project Path="VoucherSystem.Domain/VoucherSystem.Domain.csproj" />
-  <Project Path="VoucherSystem.Infrastructure/VoucherSystem.Infrastructure.csproj" />
 </Solution>
