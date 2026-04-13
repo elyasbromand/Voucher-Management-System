@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VoucherSystem.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c82c6feef1b613734f36d9a1181432b7d359ca6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72c5b1d75e7879856a494a11cdef9428154ebf0b")]
 [assembly: System.Reflection.AssemblyProductAttribute("VoucherSystem.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VoucherSystem.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
