@@ -1,0 +1,9 @@
+namespace VoucherSystem.Domain.Enums;
+
+public enum DiscountType
+{
+    Percentage,
+    FixedAmount,
+    FreeItem,
+    Cashback,
+}
