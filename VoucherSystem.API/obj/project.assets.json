@@ -36,6 +36,43 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "VoucherSystem.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "VoucherSystem.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VoucherSystem.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VoucherSystem.Application.dll": {}
+        }
+      },
+      "VoucherSystem.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/VoucherSystem.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VoucherSystem.Domain.dll": {}
+        }
+      },
+      "VoucherSystem.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "VoucherSystem.Application": "1.0.0",
+          "VoucherSystem.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VoucherSystem.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VoucherSystem.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -75,11 +112,28 @@
         "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "VoucherSystem.Application/1.0.0": {
+      "type": "project",
+      "path": "../VoucherSystem.Application/VoucherSystem.Application.csproj",
+      "msbuildProject": "../VoucherSystem.Application/VoucherSystem.Application.csproj"
+    },
+    "VoucherSystem.Domain/1.0.0": {
+      "type": "project",
+      "path": "../VoucherSystem.Domain/VoucherSystem.Domain.csproj",
+      "msbuildProject": "../VoucherSystem.Domain/VoucherSystem.Domain.csproj"
+    },
+    "VoucherSystem.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../VoucherSystem.Infrastructure/VoucherSystem.Infrastructure.csproj",
+      "msbuildProject": "../VoucherSystem.Infrastructure/VoucherSystem.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Microsoft.AspNetCore.OpenApi >= 10.0.2"
+      "Microsoft.AspNetCore.OpenApi >= 10.0.2",
+      "VoucherSystem.Application >= 1.0.0",
+      "VoucherSystem.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -113,7 +167,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\DELL G3\\Desktop\\Voucher Management System\\VoucherSystem.Application\\VoucherSystem.Application.csproj": {
+              "projectPath": "C:\\Users\\DELL G3\\Desktop\\Voucher Management System\\VoucherSystem.Application\\VoucherSystem.Application.csproj"
+            },
+            "C:\\Users\\DELL G3\\Desktop\\Voucher Management System\\VoucherSystem.Infrastructure\\VoucherSystem.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\DELL G3\\Desktop\\Voucher Management System\\VoucherSystem.Infrastructure\\VoucherSystem.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

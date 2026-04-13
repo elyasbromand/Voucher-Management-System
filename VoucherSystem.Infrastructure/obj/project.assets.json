@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "VoucherSystem.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "VoucherSystem.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VoucherSystem.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VoucherSystem.Application.dll": {}
+        }
+      },
+      "VoucherSystem.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/VoucherSystem.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VoucherSystem.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "VoucherSystem.Application/1.0.0": {
+      "type": "project",
+      "path": "../VoucherSystem.Application/VoucherSystem.Application.csproj",
+      "msbuildProject": "../VoucherSystem.Application/VoucherSystem.Application.csproj"
+    },
+    "VoucherSystem.Domain/1.0.0": {
+      "type": "project",
+      "path": "../VoucherSystem.Domain/VoucherSystem.Domain.csproj",
+      "msbuildProject": "../VoucherSystem.Domain/VoucherSystem.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "VoucherSystem.Application >= 1.0.0",
+      "VoucherSystem.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\DELL G3\\.nuget\\packages\\": {},
@@ -38,7 +76,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\DELL G3\\Desktop\\Voucher Management System\\VoucherSystem.Application\\VoucherSystem.Application.csproj": {
+              "projectPath": "C:\\Users\\DELL G3\\Desktop\\Voucher Management System\\VoucherSystem.Application\\VoucherSystem.Application.csproj"
+            },
+            "C:\\Users\\DELL G3\\Desktop\\Voucher Management System\\VoucherSystem.Domain\\VoucherSystem.Domain.csproj": {
+              "projectPath": "C:\\Users\\DELL G3\\Desktop\\Voucher Management System\\VoucherSystem.Domain\\VoucherSystem.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

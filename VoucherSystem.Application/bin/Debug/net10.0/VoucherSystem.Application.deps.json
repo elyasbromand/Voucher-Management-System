@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "VoucherSystem.Application/1.0.0": {
+        "dependencies": {
+          "VoucherSystem.Domain": "1.0.0"
+        },
+        "runtime": {
+          "VoucherSystem.Application.dll": {}
+        }
+      },
+      "VoucherSystem.Domain/1.0.0": {
+        "runtime": {
+          "VoucherSystem.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VoucherSystem.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VoucherSystem.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
