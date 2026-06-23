@@ -19,7 +19,7 @@ public sealed class Voucher
     public UserTier? AllowedUserTier { get; private set; }
     public DateTime CreatedAt { get; private set; }
 
-    // EF Core needs a parameterless constructor — keep it private
+    // EF Core needs a parameterless constructor, keep it private
     private Voucher() { }
 
     public static Voucher Create(

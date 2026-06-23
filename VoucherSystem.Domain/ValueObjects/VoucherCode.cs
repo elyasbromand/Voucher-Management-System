@@ -1,5 +1,7 @@
 namespace VoucherSystem.Domain.ValueObjects;
 
+using System.Security.Cryptography;
+
 public sealed class VoucherCode : IEquatable<VoucherCode>
 {
     public string Value { get; }
@@ -35,13 +37,14 @@ public sealed class VoucherCode : IEquatable<VoucherCode>
     /// </summary>
     public static VoucherCode Generate()
     {
-        const string chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // no 0/O/I/1 — avoids visual ambiguity
-        var random = new Random();
+        const string chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
-        string Part(int length) =>
-            new string(
-                Enumerable.Range(0, length).Select(_ => chars[random.Next(chars.Length)]).ToArray()
-            );
+        string Part(int length)
+        {
+            Span<byte> bytes = stackalloc byte[length];
+            RandomNumberGenerator.Fill(bytes);
+            return new string(bytes.ToArray().Select(b => chars[b % chars.Length]).ToArray());
+        }
 
         var code = $"{Part(3)}-{Part(4)}-{Part(3)}";
         return new VoucherCode(code);
